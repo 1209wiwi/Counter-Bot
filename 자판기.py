@@ -2,6 +2,7 @@ import discord
 import random
 import datetime
 import openpyxl
+import os
 from captcha.image import ImageCaptcha
 from discord.ext import commands, tasks
 from itertools import cycle
@@ -167,4 +168,5 @@ async def on_member_remove(member):
 async def change_message():
     await client.change_presence(activity=discord.Game(next(status)))
 
-client.run("NzM2NzgzNTQ2OTExNTU1Njc2.Xxz1Jg.CjlA5UOoR05gjHcS5cPVpRJdJU4")
+acsess_token = os.environ["BOT_TOKEN"]
+client.run("access_token")
